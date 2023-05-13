@@ -5,5 +5,4 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home.as_view(), name='home'),
     path('charge', views.charge, name='charge'),
-    path('charge_paypal', views.charge_paypal, name='charge_paypal'),
 ]

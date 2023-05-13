@@ -23,6 +23,7 @@ def charge(request):
             description = 'test payment',
             source=request.POST['stripeToken']
         )
+        Stripe.objects.create(amount=50, description='Payemnts Test', currency='USD', resource='--------')
         return render(request, 'charge.html')
     return HttpResponse('Payment Unsuccessful')
 
